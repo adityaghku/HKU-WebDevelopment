@@ -1,0 +1,225 @@
+/*Header styling*/
+
+.title {
+	background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+
+	margin: 0;
+	height: 100%;
+}
+
+header h1{
+	font-size: 4.2vw;
+	font-weight: 600;
+	background-image: linear-gradient(109.6deg, rgb(0, 37, 84) 11.2%, rgba(0, 37, 84, 0.32) 100.2%);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	text-align: center;
+	margin-top: 0;
+	height: 200%;
+}
+
+
+/*Toggle switch*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4.08vw;
+  height: 2.31vw;
+  margin-top: 0;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+@media (min-width:1000px){
+  .switchWrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: 2.041vw;
+    padding: 0.34vw;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(113.5deg, rgb(234, 234, 234) 22.3%, rgb(201, 234, 211) 56.6%, rgb(255, 180, 189) 90.9%);
+  }
+
+}
+
+@media (max-width:1000px){
+  .switchWrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: 2.041vw;
+    padding: 0.34vw;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(113.5deg, rgb(234, 234, 234) 22.3%, rgb(201, 234, 211) 56.6%, rgb(255, 180, 189) 90.9%);
+  }
+
+}
+
+
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.77vw;
+  width: 1.77vw;
+  left: 0.272vw;
+  bottom: 0.272vw;
+  background-color: white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 0.068vw #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.77vw);
+  -ms-transform: translateX(1.77vw);
+  transform: translateX(1.77vw);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 2.313vw;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.departureToggle {
+  margin-left: 30%;
+}
+
+@media (min-width:1000px){
+  header h3 {
+    margin-left: 15%;
+    font-size: 1.633vw;
+    font-style: italic;
+    color: red;
+  }
+
+  .dateDiv{
+    margin-left: 15%;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 2.04vw;
+  }
+}
+
+@media (max-width:1000px){
+  header h3 {
+    margin-left: 5%;
+    font-size: 4vw;
+    font-style: italic;
+    color: red;
+  }
+
+  .dateDiv{
+    margin-left: 5%;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 4.2vw;
+  }
+}
+
+
+
+@media (min-width:1000px){
+  /*CSS FORMATTING OF TABLE ELEMENTS*/
+  table {
+    width: 70%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    table-layout:fixed;
+    box-shadow: 0.680vw 0.680vw 0.544vw #888888;
+    font-size: 1.361vw;
+  }
+
+  table td{
+    word-wrap:break-word;
+    padding: 1%;
+    padding-left: 2%;
+  }
+
+  button {
+    display: inline-block;
+    margin-left: 42.5%;
+    width: 15%;
+    border-radius: 0.272vw;
+    border-width: medium;
+    text-align: center;
+    background-color: skyblue;
+    font-size: 1.633vw;
+    font-weight: bold;
+  }
+
+}
+
+
+@media (max-width:1000px){
+  /*CSS FORMATTING OF TABLE ELEMENTS*/
+  table {
+    width: 90%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    table-layout:fixed;
+    box-shadow: 0.680vw 0.680vw 0.544vw #888888;
+    font-size: 3.5vw;
+  }
+
+  table td{
+    word-wrap:break-word;
+    padding: 1%;
+    padding-left: 2%;
+  }
+
+  button {
+    display: inline-block;
+    margin-left: 37.5%;
+    width: 25%;
+    border-radius: 0.272vw;
+    border-width: medium;
+    text-align: center;
+    background-color: skyblue;
+    font-size: 2.5vw;
+    font-weight: bold;
+  }
+
+}
+
+

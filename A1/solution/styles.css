@@ -1,0 +1,110 @@
+body {
+  font-family: Geneva;
+}
+
+@media screen and (min-width: 1000px) {  
+
+  table {
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  table th {
+    background-color: #D6EEEE;
+    font-weight: bolder;
+  }
+
+  table td:hover {background-color: coral;}
+
+  table tr:nth-child(even) {background-color: #ffffff;}
+
+  table td, table th {
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+  }
+
+
+  table tr:nth-child(n+2) td:nth-child(1){
+    background-color: #D6EEEE;
+  }
+
+  table tr:nth-child(n+1) td:nth-child(n+2){
+    color: red;
+  }
+
+  table tr:nth-child(1) td:nth-child(2) {
+    background-color: #D6EEEE;
+    color: black;
+  }
+
+  /*rotating text*/
+
+  td span 
+  {
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+
+  table tr:nth-child(1) td:nth-child(1) {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 1000px) {  
+  table {width: 100%;}
+
+  table thead {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+  }
+  
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border: 1px solid;
+    display: block;
+    font-size: .7em;
+    text-align: right;
+  }
+
+  table th{
+    background-color: #D6EEEE;
+  }
+
+  table tr:nth-child(even) {background-color: #f2f2f2;}
+
+  table tr:nth-child(1) td:nth-child(2) {
+    text-align: center;
+    font-weight: Bold;
+    background-color: #D6EEEE;
+  }
+
+  table tr td:nth-child(1) {
+    text-align: center;
+    font-weight: Bold;
+    background-color: #D6EEEE;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    float: left;
+  }
+  
+  table td:last-child {
+    border-bottom: 1px solid;
+  }
+}

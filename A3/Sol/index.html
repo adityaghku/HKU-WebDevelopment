@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css"/>
+      <title>Hong Kong International Flight Information</title>
+   </head>
+
+   <body>
+      <header class="title">
+         <h1>Hong Kong International Flight Information</h1>
+      </header>
+      <div class = "dateDiv" id="dateDiv"></div>
+
+      <script>
+         date = new Date();
+         let day = date.getDate();
+         let month = date.toLocaleString('default', { month: 'long' });
+         let year = date.getFullYear();
+         let currentDate = `Date: ${day} ${month} ${year}`;
+
+         const d = document.getElementById("dateDiv");
+         const node = document.createTextNode(currentDate);
+         d.appendChild(node);
+      </script>
+
+      <div class="switchWrapper">
+         <div class="departureToggle">Departures &nbsp</div>
+         <label class="switch">
+            
+           <input type="checkbox" id="toggleSwitch" onclick="showButtonsAgain(); clearMain(); updateHeader();  main()">
+           <span class="slider round"></span>
+           
+         </label>
+
+         <div>&nbsp Arrivals</div>
+      </div>
+      
+
+
+      <header>
+         <h3 class="informationHeader" id="informationHeader">Departure Information</h3>
+      </header>
+
+      <button id="early" onclick="earlyClicked(); style.display = 'none'; clearMain(); main()">
+         Load Earlier Flights
+      </button>
+      
+      <div class='mainLayout' id='mainLayout'></div>
+      <script type="text/javascript" defer src="loaddata.js"></script>
+      
+      <button id="late" onclick="lateClicked(); style.display = 'none'; clearMain(); main()">
+      Load Upcoming Flights
+      </button>
+   </body>
+
+</html>
+
+
